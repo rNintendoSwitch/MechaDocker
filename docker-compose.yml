@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  logviewer:
+    build: 
+      context: .
+      dockerfile: dockerfile_logviewer
+    volumes:
+      - ./logviewer/:/app/
+    command: python app.py
+    ports:
+      - 8880:8880/tcp
+    environment:
+      - HOST=0.0.0.0
+    # depends_on:
+    #   - database
