@@ -1,0 +1,15 @@
+[submodule "MechaBowser"]
+	path = MechaBowser
+	url = git@github.com:rNintendoSwitch/MechaBowser.git
+	branch = docker-prep
+	ignore = dirty
+[submodule "Parakarry"]
+	path = Parakarry
+	url = git@github.com:rNintendoSwitch/Parakarry.git
+	branch = docker-prep
+	ignore = dirty
+[submodule "logviewer"]
+	path = logviewer
+	url = git@github.com:rNintendoSwitch/logviewer.git
+	branch = docker-prep
+	ignore = dirty
