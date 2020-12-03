@@ -6,6 +6,7 @@ Docker compose for [MechaBowser](https://github.com/rNintendoSwitch/MechaBowser)
 git clone git@github.com:rNintendoSwitch/MechaDocker.git
 cd MechaDocker
 git submodule update --init --recursive --remote
+git submodule foreach git switch master
 git submodule foreach pip install -r requirements.txt
 docker-compose up -d
 ```
