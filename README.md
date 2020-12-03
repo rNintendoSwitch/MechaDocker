@@ -12,6 +12,7 @@ docker-compose up -d
 
 ## Quick Start
 ```sh
+git pull
 git submodule update --recursive --remote
 docker-compose up -d
 ```
