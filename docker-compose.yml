@@ -4,7 +4,7 @@ services:
   logviewer:
     build: 
       context: .
-      dockerfile: dockerfile_logviewer
+      dockerfile: logviewer.dockerfile
     volumes:
       - ./logviewer/:/app/
     command: python app.py
