@@ -8,10 +8,12 @@ cd MechaDocker
 git submodule update --init --recursive --remote
 git submodule foreach git switch master
 git submodule foreach pip install -r requirements.txt
+git submodule foreach cp config.example.py config.py 
+# Edit config.py files in Mechabowser/, Parakarry/, and logviewer/ (optional)
 docker-compose up -d
 ```
 
-## Quick Start
+## Quick Sync & Start
 ```sh
 git pull
 git submodule update --recursive --remote
