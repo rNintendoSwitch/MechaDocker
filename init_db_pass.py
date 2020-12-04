@@ -9,12 +9,13 @@ if 'mechadocker-database' in docker_volumes.decode("utf-8"):
 
 random_password = secrets.token_urlsafe(32)
 
+print(f'Writing .env file')
 with open('.env', 'w') as f:
     f.write('# MONGO_PASSWORD is only used on initialization of the database.\n')
     f.write(f'MONGO_PASSWORD={random_password}\n')
 
 for dir in ['MechaBowser', 'Parakarry', 'logviewer']:
-    print(f'Copying and updating password config for {dir}')
+    print(f'Updating mongo connection details for {dir}')
 
     with open(f'{dir}/config.py', 'r+', encoding='utf-8') as f:
         content = f.read()

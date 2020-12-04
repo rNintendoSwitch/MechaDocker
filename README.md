@@ -13,13 +13,9 @@ python init_db_pass.py
 docker volume create --name mechadocker-database -d local
 docker-compose build
 ```
-* Edit config.py files in: Mechabowser/, Parakarry/, and (optionally) logviewer/ 
+* Edit the config.py files in: Mechabowser/, Parakarry/, and (optionally) logviewer/ 
 * Start the services with `docker-compose up` (development) or `docker-compose up -d --restart unless-stopped`
-
-* During devlopment, type
-
-## Pulling Changes
-Run the follow shell commands top pull new changes (including submodules):
+* Type the following shell commands to pull new changes (including submodules):
 ```sh
 git pull
 git submodule update --recursive --remote
