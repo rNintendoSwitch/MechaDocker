@@ -15,7 +15,7 @@ jobs:
         run: |
           git submodule update --recursive --remote
 
-      - nmae: Check for uncommited changes
+      - name: Check for uncommited changes
         run: |
           git diff-index --quiet HEAD
 
