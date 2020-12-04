@@ -7,7 +7,6 @@ Docker configuration for [MechaBowser](https://github.com/rNintendoSwitch/MechaB
 git clone git@github.com:rNintendoSwitch/MechaDocker.git
 cd MechaDocker
 git submodule update --init --recursive --remote
-git submodule foreach git switch master
 git submodule foreach cp config.example.py config.py
 python init_db_pass.py
 docker volume create --name mechadocker-database -d local
@@ -20,6 +19,5 @@ docker-compose build
 * Type the following shell commands to pull new changes (including submodules):
 ```sh
 git pull
-git submodule foreach git switch master
 git submodule update --recursive --remote
 ```
