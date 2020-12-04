@@ -21,4 +21,5 @@ docker-compose build
 ```sh
 git pull
 git submodule update --recursive --remote
+git submodule foreach git switch master
 ```
