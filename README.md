@@ -6,7 +6,12 @@ Docker configuration for [MechaBowser](https://github.com/rNintendoSwitch/MechaB
 ```sh
 git clone git@github.com:rNintendoSwitch/MechaDocker.git
 cd MechaDocker
-python init.py
+git submodule update --init --recursive --remote
+git submodule foreach git switch master
+git submodule foreach cp config.example.py config.py
+python init_db_pass.py
+docker volume create --name mechadocker-database -d local
+docker-compose build
 ```
 * Edit config.py files in: Mechabowser/, Parakarry/, and (optionally) logviewer/ 
 * Start the services with `docker-compose up` (development) or `docker-compose up -d --restart unless-stopped`
