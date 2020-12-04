@@ -20,7 +20,7 @@ jobs:
       - name: Check for uncommitted changes
         id: uncommitted
         run: |
-          git diff-index HEAD
+          git diff-index HEAD --quiet
 
       - name: Commit and push changes
         if: steps.uncommitted.conclusion == 'failure'
