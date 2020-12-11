@@ -13,9 +13,9 @@ docker volume create --name mechadocker-database -d local
 docker-compose build
 ```
 * Edit the config.py files in: Mechabowser/, Parakarry/, and (optionally) logviewer/ 
-* Start the services with:
-  - `docker-compose up` (development)
-  - `docker-compose up -d --restart unless-stopped`
+* Start the service(s) with:
+  - `docker-compose up (service)` or
+  - `docker-compose up (service) -d --restart unless-stopped`
 * Type the following shell commands to pull new changes (including submodules):
 ```sh
 git pull
