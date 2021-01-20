@@ -17,7 +17,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:?err}
 
   logviewer:
-    build: .
+    build: ./logviewer
     volumes:
       - ./logviewer/:/app/
     command: python app.py
@@ -29,7 +29,7 @@ services:
       - database
 
   mechabowser:
-    build: .
+    build: ./MechaBowser
     volumes:
       - ./MechaBowser/:/app/
     command: python bot.py
@@ -37,7 +37,7 @@ services:
       - database
 
   parakarry:
-    build: .
+    build: ./Parakarry
     volumes:
       - ./Parakarry/:/app/
     command: python bot.py
