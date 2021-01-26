@@ -1,6 +1,10 @@
-import re, secrets, subprocess, sys
+import re
+import secrets
+import subprocess
+import sys
 
-docker_volumes = subprocess.check_output(['docker','volume','ls'])
+
+docker_volumes = subprocess.check_output(['docker', 'volume', 'ls'])
 if 'mechadocker-database' in docker_volumes.decode("utf-8"):
     print('The mechadocker-database volume already exists!')
     print('The MONGO_PASSWORD value is only used on initialization of the database.')
