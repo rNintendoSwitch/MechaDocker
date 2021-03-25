@@ -8,16 +8,24 @@ git clone git@github.com:rNintendoSwitch/MechaDocker.git
 cd MechaDocker
 git submodule update --init --recursive --remote
 git submodule foreach cp config.example.py config.py
+
+# Setup database
 python init_db_pass.py
 docker volume create --name mechadocker-database -d local
+
 docker-compose build
 ```
 * Edit the config.py files in: Mechabowser/, Parakarry/, and (optionally) logviewer/ 
 * Start the service(s) with `docker-compose up`. Below are a few examples:
 ```sh
+# Run a limited set of services
 docker-compose up parakarry logviewer
+
+# Auto-restart services
 docker-compose up -d --restart unless-stopped
-docker-compose up mechabowser --no-deps
+
+# Run without database
+docker-compose up --no-deps
 ```
 * Type the following shell commands to pull new changes (including submodules):
 ```sh
