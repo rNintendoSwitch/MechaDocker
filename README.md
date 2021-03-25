@@ -24,8 +24,8 @@ docker-compose up parakarry logviewer
 # Auto-restart services
 docker-compose up -d --restart unless-stopped
 
-# Run without database
-docker-compose up --no-deps
+# Run a service without database
+docker-compose up mechabowser --no-deps
 ```
 * Type the following shell commands to pull new changes (including submodules):
 ```sh
