@@ -31,7 +31,8 @@ services:
   mechabowser:
     build: ./MechaBowser
     volumes:
-      - ./MechaBowser/:/app/
+      - ./MechaBowser/:/MechaBowser/
+      - ./.git/modules/MechaBowser/:/.git/modules/MechaBowser/
     command: python bot.py
     depends_on:
       - database
@@ -40,7 +41,8 @@ services:
   parakarry:
     build: ./Parakarry
     volumes:
-      - ./Parakarry/:/app/
+      - ./Parakarry/:/Parakarry/
+      - ./.git/modules/Parakarry/:/.git/modules/Parakarry/
     command: python bot.py
     depends_on:
       - database
