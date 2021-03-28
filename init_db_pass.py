@@ -14,7 +14,7 @@ if 'mechadocker-database' in docker_volumes.decode("utf-8"):
 random_password = secrets.token_urlsafe(32)
 
 print(f'Writing .env file')
-with open('.env', 'w') as f:
+with open('.env', 'a') as f:
     f.write('# MONGO_PASSWORD is only used on initialization of the database.\n')
     f.write(f'MONGO_PASSWORD={random_password}\n')
 

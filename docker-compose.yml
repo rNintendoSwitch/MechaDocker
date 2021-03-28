@@ -33,6 +33,9 @@ services:
     volumes:
       - ./MechaBowser/:/MechaBowser/
       - ./.git/modules/MechaBowser/:/.git/modules/MechaBowser/
+    environment:
+      GITHUB_USER: ${GITHUB_USER}
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
     command: python bot.py
     depends_on:
       - database
