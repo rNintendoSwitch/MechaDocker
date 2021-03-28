@@ -30,5 +30,6 @@ docker-compose up mechabowser --no-deps
 * Type the following shell commands to pull new changes (including submodules):
 ```sh
 git pull
+git submodule sync --recursive
 git submodule update --recursive --remote
 ```

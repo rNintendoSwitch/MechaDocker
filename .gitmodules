@@ -1,15 +1,18 @@
 [submodule "MechaBowser"]
 	path = MechaBowser
-	url = git@github.com:rNintendoSwitch/MechaBowser.git
+	url = https://github.com/rNintendoSwitch/MechaBowser.git
+	pushurl = git@github.com:rNintendoSwitch/MechaBowser.git
 	branch = master
 	ignore = dirty
 [submodule "Parakarry"]
 	path = Parakarry
-	url = git@github.com:rNintendoSwitch/Parakarry.git
+	url = https://github.com/rNintendoSwitch/Parakarry.git
+	pushurl = git@github.com:rNintendoSwitch/Parakarry.git
 	branch = master
 	ignore = dirty
 [submodule "logviewer"]
 	path = logviewer
-	url = git@github.com:rNintendoSwitch/logviewer.git
+	url = https://github.com/rNintendoSwitch/logviewer.git
+	pushurl = git@github.com:rNintendoSwitch/logviewer.git
 	branch = master
 	ignore = dirty
