@@ -24,11 +24,11 @@ docker-compose build
 # Run a limited set of services
 docker-compose up parakarry logviewer
 
-# Auto-restart services
-docker-compose up -d --restart unless-stopped
+# Run with daemon 
+docker-compose up -d 
 
 # Run a service without database
-docker-compose up mechabowser --no-deps
+docker-compose up --no-deps mechabowser
 ```
 
 ### Pulling New Changes
