@@ -19,3 +19,5 @@
 [submodule "crashfile-detector"]
 	path = crashfile-detector
 	url = https://github.com/python-discord/crashfile-detector.git
+	branch = main
+	ignore = dirty
