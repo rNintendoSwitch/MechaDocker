@@ -17,6 +17,16 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:?err}
     restart: "no"
 
+  crashfile-detector:
+    volumes:
+      - ./crashfile-detector/app:/app/:ro
+    ports:
+      - 8000:8000
+    environment:
+      - WEB_CONCURRENCY=2
+    build: ./crashfile-detector
+    restart: unless-stopped
+
   logviewer:
     build: ./logviewer
     volumes:
@@ -39,6 +49,7 @@ services:
     command: python bot.py
     depends_on:
       - database
+      - crashfile-detector
     restart: unless-stopped
 
   parakarry:

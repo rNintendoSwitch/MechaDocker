@@ -16,3 +16,6 @@
 	pushurl = git@github.com:rNintendoSwitch/logviewer.git
 	branch = master
 	ignore = dirty
+[submodule "crashfile-detector"]
+	path = crashfile-detector
+	url = https://github.com/python-discord/crashfile-detector.git
