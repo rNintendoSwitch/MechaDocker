@@ -17,7 +17,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:?err}
     restart: "no"
 
-  mechabowser:
+  mechabowser-cov:
     build:
       context: ./MechaBowser
       dockerfile: coverage.dockerfile
@@ -30,5 +30,4 @@ services:
     command: bash coverage.sh
     depends_on:
       - database
-      - crashfile-detector
     restart: unless-stopped
