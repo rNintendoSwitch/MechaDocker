@@ -22,10 +22,10 @@ for dir in ['MechaBowser', 'Parakarry', 'logviewer']:
     print(f'Updating mongo connection details for {dir}')
 
     with open(f'{dir}/config.py', 'r+', encoding='utf-8') as f:
+        mongoURI = f'mongodb://root:{random_password}@mechadocker_database/?retryWrites=true&w=majority'
+
         content = f.read()
-        content = re.sub(r'mongoUser = .+\n', 'mongoUser = \'root\'\n', content)
-        content = re.sub(r'mongoPass = .+\n', f'mongoPass = \'{random_password}\'\n', content)
-        content = re.sub(r'mongoHost = .+\n', 'mongoHost = \'mechadocker_database\'\n', content)
+        content = re.sub(r'mongoURI ?= ?.*\n', f'mongoURI = \'{mongoURI}\'\n', content)
 
         f.seek(0)
         f.write(content)
